@@ -1,13 +1,16 @@
 version: 2.1
-jobs: 
-    build-and-test:  
+jobs:
+    build-and-test:
         machine: 
             image: ubuntu-2204:2024.11.1
-        steps: 
-            - checkout 
-            - run: make deps 
-            - run: make test       
+        steps:
+            - checkout
+            - run: make deps
+            - run: make test
+            - run: make docker_build
 workflows: 
-  basic:  
-    jobs: 
-      - build-and-test 
+  basic:
+    jobs:
+        - build-and-test
+machine:
+      image: ubuntu-2204:2024.01.2
