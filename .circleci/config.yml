@@ -13,4 +13,4 @@ jobs:
 workflows: 
   basic:  
     jobs: 
-      - build-and-test   blad
+      - build-and-test
