@@ -3,7 +3,8 @@ version: 2.1
 jobs:
   build-and-test:
     machine:
-      image: ubuntu-2004:2021.06
+      image: ubuntu-2004:latest 
+      resource_class: large      
     steps:
       - checkout
       - run: make deps
