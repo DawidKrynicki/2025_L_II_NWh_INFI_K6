@@ -1,16 +1,16 @@
-version: 2.1
+version: 2.1 
 
-jobs:
-  build-and-test:
-    machine:
-      image: ubuntu-2004:latest 
-      resource_class: large      
-    steps:
-      - checkout
-      - run: make deps
-      - run: make test
 
-workflows:
-  basic:
-    jobs:
+jobs: 
+  build-and-test:  
+    machine: 
+      image: ubuntu-2004:202104-01      
+    steps: 
+      - checkout 
+      - run: make deps 
+      - run: make test       
+
+workflows: 
+  basic:  
+    jobs: 
       - build-and-test
