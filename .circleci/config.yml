@@ -8,6 +8,7 @@ jobs:
     steps: 
       - checkout 
       - run: make deps 
+      - run: make lint
       - run: make test       
 
 workflows: 
