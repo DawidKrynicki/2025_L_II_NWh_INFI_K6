@@ -3,11 +3,13 @@ version: 2.1
 
 jobs: 
   build-and-test:  
-    machine: 
-      image: ubuntu-2004:202104-01      
+    machine:
+      image: ubuntu-2204:2024.01.2
+    
     steps: 
       - checkout 
       - run: make deps 
+      - run: make docker_build
       - run: make lint
       - run: make test       
 
